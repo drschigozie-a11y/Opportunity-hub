@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12345a">
+<meta name="description" content="Discover scholarships, remote jobs and internships for students and graduates.">
+<title>Opportunity Hub — Your next opportunity starts here</title>
+<style>
+:root{--navy:#12345a;--blue:#1769d2;--teal:#0f766e;--ink:#172b4d;--muted:#61718a;--paper:#f5f8fc;--line:#e1e8f1;--white:#fff;--gold:#f2bd55;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}a{color:var(--blue)}button{cursor:pointer}
+header{background:var(--navy);color:#fff}.topbar{max-width:1120px;margin:auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:1.12rem}.brandmark{width:40px;height:40px;border-radius:12px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:23px}.navlinks{display:flex;gap:16px;align-items:center}.navlinks a{color:#e9f2ff;text-decoration:none;font-size:.93rem}.navlinks a:hover{text-decoration:underline}
+.hero{background:linear-gradient(120deg,#12345a,#175ca4);color:#fff;padding:44px 20px 38px}.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#a9d6ff;font-size:.76rem}.hero h1{font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.05;letter-spacing:-.04em;margin:12px 0}.hero p{max-width:600px;color:#e3edfa;font-size:1.08rem}.hero-note{border:1px solid #ffffff38;background:#ffffff12;border-radius:20px;padding:22px}.hero-note strong{display:block;font-size:1.1rem;margin-bottom:8px}.hero-note ul{padding-left:20px;color:#e7f2ff;margin-bottom:0}
+main{max-width:1120px;margin:auto;padding:24px 20px 60px}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-2px}.category{border:1px solid var(--line);border-radius:16px;background:#fff;padding:18px;text-align:left;box-shadow:0 5px 18px #153b6310;min-height:118px;color:var(--ink)}.category .emoji{font-size:1.55rem}.category strong{display:block;margin:7px 0 2px}.category small{color:var(--muted)}.category.active{border:2px solid var(--blue);padding:17px;background:#f0f6ff}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 16px}.toolbar input,.toolbar select,.formfield input,.formfield select,.formfield textarea{width:100%;min-width:0;border:1px solid #cbd6e5;border-radius:11px;padding:12px 13px;background:#fff;color:var(--ink)}.searchbox{flex:2 1 230px}.filterbox{flex:1 1 150px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:28px 0 14px}.section-heading h2{margin:0;font-size:1.45rem}.muted{color:var(--muted)}.count{font-size:.9rem;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 4px 14px #153b6308;display:flex;flex-direction:column;gap:10px}.card-top{display:flex;justify-content:space-between;align-items:start;gap:8px}.pill{display:inline-flex;align-items:center;padding:4px 9px;border-radius:999px;font-size:.76rem;font-weight:750;background:#e8f1ff;color:#1456a2}.pill.scholarship{background:#e5f8ee;color:#146a43}.pill.remote{background:#e7f4ff;color:#125c9e}.pill.internship{background:#fff1df;color:#94510d}.pill.demo{background:#fff5d6;color:#7c5700}.card h3{margin:0;font-size:1.08rem;line-height:1.3}.org{color:var(--muted);font-size:.9rem}.meta{display:flex;flex-wrap:wrap;gap:7px 12px;color:#4d6079;font-size:.84rem}.card-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:5px}.btn{border:0;border-radius:11px;padding:11px 15px;background:var(--blue);color:#fff;font-weight:750;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:7px}.btn:hover{filter:brightness(.94)}.btn.secondary{background:#eaf2ff;color:#174c8d}.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.small{font-size:.87rem;padding:9px 12px}.empty{background:#fff;border:1px dashed #bac8da;border-radius:16px;padding:28px;text-align:center;color:var(--muted);grid-column:1/-1}
+.notice{background:#fff8e4;border:1px solid #f0d891;color:#694b05;padding:13px 15px;border-radius:12px;font-size:.9rem;margin:18px 0}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0}.trust div{background:#eaf5f2;border-radius:14px;padding:16px}.trust strong{display:block;margin-bottom:5px}.trust p{margin:0;font-size:.9rem;color:#45635e}
+details.admin{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}details.admin summary{cursor:pointer;font-weight:800}details.admin p{color:var(--muted);font-size:.92rem}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formfield{display:flex;flex-direction:column;gap:5px}.formfield label{font-size:.87rem;font-weight:700}.formfield.full{grid-column:1/-1}.formfield textarea{min-height:90px;resize:vertical}.form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.status{margin-top:10px;font-size:.9rem;color:var(--teal)}footer{background:#0d2746;color:#dbe8f8;padding:26px 20px}footer .inner{max-width:1120px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}footer p{margin:3px 0;color:#b8c9df;font-size:.88rem}
+.modal{position:fixed;inset:0;background:#081a30a8;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.open{display:flex}.modalbox{background:#fff;border-radius:20px;max-width:620px;width:100%;max-height:90vh;overflow:auto;padding:22px}.modalhead{display:flex;justify-content:space-between;gap:12px}.close{border:0;background:#edf2f8;border-radius:50%;width:38px;height:38px;font-size:1.3rem}.modalbox h2{margin-top:10px}.modalbox h3{margin-bottom:4px}.modalbox p,.modalbox li{color:#465a73}.safety{font-size:.86rem;background:#f4f8fd;padding:12px;border-radius:10px}
+@media(max-width:720px){.hero-inner{grid-template-columns:1fr}.hero-note{display:none}.navlinks{gap:10px}.navlinks a{font-size:.82rem}.topbar{padding:13px 15px}.brand{font-size:1rem}.brandmark{width:36px;height:36px}.hero{padding:36px 18px 30px}.category-grid{gap:8px}.category{padding:12px;min-height:112px}.category.active{padding:11px}.category small{font-size:.76rem}.cards{grid-template-columns:1fr}.trust{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formfield.full{grid-column:auto}main{padding:20px 14px 42px}.section-heading{align-items:start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <a class="brand" href="#" aria-label="Opportunity Hub home"><span class="brandmark">🎓</span><span>Opportunity Hub</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#opportunities">Explore</a><a href="#how-it-works">How it works</a><a href="#suggest">Suggest a listing</a></nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">For students & graduates</div>
+      <h1>Your next opportunity starts here.</h1>
+      <p>Discover scholarships, remote jobs and internships in one place. Find the details, check eligibility and apply through the official source.</p>
+      <a class="btn" href="#opportunities">Explore opportunities <span aria-hidden="true">→</span></a>
+    </div>
+    <aside class="hero-note">
+      <strong>Opportunities, made easier.</strong>
+      <ul><li>Search by category and keyword</li><li>Check deadlines and eligibility</li><li>Follow official application links</li></ul>
+    </aside>
+  </div>
+</section>
+<main>
+  <div class="category-grid" aria-label="Opportunity categories">
+    <button class="category active" data-category="all"><span class="emoji">🎓</span><strong>Scholarships</strong><small>Study and funding options</small></button>
+    <button class="category" data-category="remote"><span class="emoji">💻</span><strong>Remote jobs</strong><small>Work from anywhere</small></button>
+    <button class="category" data-category="internship"><span class="emoji">🧑‍💼</span><strong>Internships</strong><small>Build your experience</small></button>
+  </div>
+  <div class="section-heading" id="opportunities"><div><h2>Explore opportunities</h2><div class="muted">Start with a category or search all listings.</div></div><span class="count" id="count">0 listings</span></div>
+  <div class="toolbar">
+    <div class="searchbox"><input id="search" type="search" placeholder="Search title, organisation or keyword…" aria-label="Search opportunities"></div>
+    <div class="filterbox"><select id="typeFilter" aria-label="Filter by category"><option value="all">All categories</option><option value="scholarship">Scholarships</option><option value="remote">Remote jobs</option><option value="internship">Internships</option></select></div>
+    <div class="filterbox"><select id="levelFilter" aria-label="Filter by career stage"><option value="all">All experience levels</option><option>Undergraduate</option><option>Graduate</option><option>Entry-level</option><option>Any level</option></select></div>
+  </div>
+  <div class="notice"><strong>Launch note:</strong> This first version includes clearly labelled demo listings so you can test the site. They are not live opportunities. Replace them with verified listings before promoting the website.</div>
+  <div class="cards" id="cards" aria-live="polite"></div>
+  <section id="how-it-works">
+    <div class="section-heading"><div><h2>How to use Opportunity Hub</h2><div class="muted">Simple steps for a safer search.</div></div></div>
+    <div class="trust">
+      <div><strong>🔎 Find a match</strong><p>Search by opportunity type, study level, job level or keywords.</p></div>
+      <div><strong>✅ Check the source</strong><p>Read eligibility and deadline details, then confirm everything on the official site.</p></div>
+      <div><strong>🔗 Apply directly</strong><p>Use the official application link. Opportunity Hub does not ask you to pay to access listings.</p></div>
+    </div>
+    <p class="muted">We aim to check every listing, but users should always confirm details with the original organisation. Never send money to a recruiter promising a guaranteed job or scholarship.</p>
+  </section>
+  <details class="admin" id="suggest">
+    <summary>Suggest an opportunity / Listing manager</summary>
+    <p><strong>For visitors:</strong> use this form to suggest a listing for review. Suggestions are not published automatically. After you deploy this site to Netlify, submissions can be configured through Netlify Forms if form detection is enabled for the site.</p>
+    <form name="suggest-opportunity" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="suggestForm">
+      <input type="hidden" name="form-name" value="suggest-opportunity">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
+      <div class="formgrid">
+        <div class="formfield"><label for="sTitle">Opportunity title *</label><input id="sTitle" name="title" required placeholder="e.g. Graduate internship"></div>
+        <div class="formfield"><label for="sOrg">Organisation *</label><input id="sOrg" name="organisation" required placeholder="Official organisation name"></div>
+        <div class="formfield"><label for="sCategory">Category *</label><select id="sCategory" name="category" required><option value="">Choose category</option><option>Scholarship</option><option>Remote job</option><option>Internship</option></select></div>
+        <div class="formfield"><label for="sDeadline">Deadline (or ongoing)</label><input id="sDeadline" name="deadline" placeholder="e.g. 30 November 2026"></div>
+        <div class="formfield full"><label for="sLink">Official source / application URL *</label><input id="sLink" name="official_url" type="url" required placeholder="https://official-organisation.example"></div>
+        <div class="formfield full"><label for="sWhy">Why should we include it? *</label><textarea id="sWhy" name="reason" required placeholder="Include eligibility, location, funding/pay and where you verified it. Do not include private information."></textarea></div>
+        <div class="formfield"><label for="sEmail">Your email (optional)</label><input id="sEmail" name="email" type="email" placeholder="you@example.com"></div>
+      </div>
+      <div class="form-actions"><button class="btn" type="submit">Submit suggestion</button><button class="btn ghost" type="reset">Clear form</button></div>
+      <p class="status" id="formStatus" role="status"></p>
+    </form>
+    <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+    <h3>Owner's publishing checklist</h3>
+    <p>Before adding a listing to the public catalogue: open the official organisation page, confirm the opportunity still exists, check who can apply, confirm pay/funding and deadline, and record the date you checked it. Never publish an unverified social-media repost as the only source.</p>
+  </details>
+</main>
+<footer><div class="inner"><div><strong>🎓 Opportunity Hub</strong><p>Your next opportunity starts here.</p></div><div><p>Independent opportunity directory. Not affiliated with listed organisations.</p><p>Always confirm details on the official source.</p></div></div></footer>
+<div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalbox"><div class="modalhead"><span class="pill" id="modalType">Opportunity</span><button class="close" id="closeModal" aria-label="Close details">×</button></div><h2 id="modalTitle"></h2><div class="org" id="modalOrg"></div><div class="meta" id="modalMeta" style="margin:12px 0"></div><h3>About this opportunity</h3><p id="modalDescription"></p><h3>Eligibility</h3><p id="modalEligibility"></p><p class="safety">Safety reminder: verify the details, deadline and application address on the organisation's official website. Do not pay a recruiter to secure a job or scholarship.</p><a class="btn" id="modalApply" href="#" target="_blank" rel="noopener noreferrer">Open official source ↗</a></div></div>
+<script>
+const demoListings = [
+ {id:"demo1",category:"scholarship",title:"Example: Fully funded postgraduate scholarship",organisation:"Replace with a verified university or funder",level:"Graduate",location:"International",funding:"Funding details to verify",deadline:"Confirm on official source",description:"DEMO ONLY. Replace this example with a real, currently open scholarship before publishing your site to the public.",eligibility:"Add eligibility requirements from the official source.",url:"",demo:true},
+ {id:"demo2",category:"remote",title:"Example: Entry-level remote role",organisation:"Replace with a verified employer",level:"Entry-level",location:"Remote",funding:"Pay to verify",deadline:"Confirm on official source",description:"DEMO ONLY. Replace this example with a real remote job and confirm that applicants based in Nigeria are eligible.",eligibility:"Add required skills, location restrictions and experience level from the employer's official careers page.",url:"",demo:true},
+ {id:"demo3",category:"internship",title:"Example: Graduate or student internship",organisation:"Replace with a verified organisation",level:"Undergraduate",location:"Check location",funding:"Paid status to verify",deadline:"Confirm on official source",description:"DEMO ONLY. Replace this example with a currently open internship listed by the organisation itself.",eligibility:"Add eligible courses, year of study, duration, location and required documents.",url:"",demo:true}
+];
+let listings = [...demoListings];
+let activeCategory = "all";
+const $ = id => document.getElementById(id);
+const niceCategory = c => ({scholarship:"Scholarship",remote:"Remote job",internship:"Internship"}[c] || c);
+function safeUrl(value){try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:""}catch(e){return ""}}
+function render(){
+ const q=$("search").value.trim().toLowerCase(), type=$("typeFilter").value, level=$("levelFilter").value;
+ const selectedType=type!=="all"?type:activeCategory;
+ const found=listings.filter(x=>{
+  const matchesCategory=selectedType==="all"||x.category===selectedType;
+  const text=[x.title,x.organisation,x.location,x.level,x.description].join(" ").toLowerCase();
+  return matchesCategory&&text.includes(q)&&(level==="all"||x.level===level||x.level==="Any level");
+ });
+ $("count").textContent=found.length+" listing"+(found.length===1?"":"s");
+ $("cards").innerHTML="";
+ if(!found.length){$("cards").innerHTML='<div class="empty">No matching listings yet. Try another keyword or category.</div>';return}
+ found.forEach(x=>{
+  const article=document.createElement("article");article.className="card";
+  article.innerHTML=`<div class="card-top"><span class="pill ${x.category}">${niceCategory(x.category)}</span>${x.demo?'<span class="pill demo">DEMO</span>':''}</div><h3></h3><div class="org"></div><div class="meta"></div><p class="muted" style="margin:0;font-size:.92rem"></p><div class="card-bottom"><span class="muted" style="font-size:.82rem"></span><button class="btn small" type="button">View details →</button></div>`;
+  article.querySelector("h3").textContent=x.title;
+  article.querySelector(".org").textContent=x.organisation;
+  article.querySelector(".meta").textContent=[x.level,x.location,x.funding].filter(Boolean).join(" · ");
+  article.querySelector("p").textContent=x.demo?"Demo placeholder — replace with a verified opportunity.":x.description;
+  article.querySelector(".card-bottom span").textContent="Deadline: "+(x.deadline||"Check official source");
+  article.querySelector("button").addEventListener("click",()=>openDetails(x));
+  $("cards").appendChild(article);
+ });
+}
+function openDetails(x){
+ $("modalType").textContent=niceCategory(x.category)+(x.demo?" · DEMO":"");
+ $("modalTitle").textContent=x.title;$("modalOrg").textContent=x.organisation;
+ $("modalMeta").textContent=[x.level,x.location,x.funding,"Deadline: "+(x.deadline||"Check official source")].filter(Boolean).join(" · ");
+ $("modalDescription").textContent=x.description;$("modalEligibility").textContent=x.eligibility||"Confirm requirements on the official source.";
+ const url=safeUrl(x.url), apply=$("modalApply");
+ if(url&&!x.demo){apply.href=url;apply.style.display="inline-flex"}else{apply.removeAttribute("href");apply.style.display="none"}
+ $("detailModal").classList.add("open");$("closeModal").focus();
+}
+document.querySelectorAll(".category").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+ activeCategory=btn.dataset.category;
+ $("typeFilter").value=activeCategory==="all"?"all":activeCategory;render();$("opportunities").scrollIntoView({behavior:"smooth"});
+}));
+["search","typeFilter","levelFilter"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",()=>{if(id==="typeFilter"){activeCategory=$("typeFilter").value;document.querySelectorAll(".category").forEach(b=>b.classList.toggle("active",b.dataset.category===activeCategory))}render()}));
+$("closeModal").addEventListener("click",()=>$("detailModal").classList.remove("open"));
+$("detailModal").addEventListener("click",e=>{if(e.target===$("detailModal"))$("detailModal").classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("detailModal").classList.remove("open")});
+$("suggestForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const url=safeUrl($("sLink").value);
+ if(!url){$("formStatus").textContent="Please enter a valid http:// or https:// official source URL.";return}
+ $("formStatus").textContent="This is a local preview. After deploying to Netlify, Netlify Forms can receive suggestions once form detection is enabled. Until then, copy the details and review them manually.";
+ const data=Object.fromEntries(new FormData(e.currentTarget).entries());
+ const subject=encodeURIComponent("Opportunity Hub listing suggestion: "+data.title);
+ const body=encodeURIComponent("Title: "+data.title+"\nOrganisation: "+data.organisation+"\nCategory: "+data.category+"\nDeadline: "+data.deadline+"\nOfficial URL: "+data.official_url+"\nReason / eligibility details: "+data.reason+"\nContact email: "+data.email);
+ // Open the user's email app as a no-backend fallback; nothing is sent automatically.
+ window.location.href="mailto:?subject="+subject+"&body="+body;
+});
+render();
+</script>
+</body>
+</html>
